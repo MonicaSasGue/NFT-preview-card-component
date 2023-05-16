@@ -1,0 +1,164 @@
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyanAlpha: hsla(178, 100%, 50%, 0.5);
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --font: 'Outfit', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    background-color: var(--mainBG);
+    font-size: 1.8rem;
+    font-family: var(--font);
+    color: var(--softBlue);
+    font-weight: 300;
+}
+
+hr {
+    margin: 2rem 0;
+    border: 1px solid var(--line);
+}
+
+.contenedor {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta {
+    width: min(90%, 37.5rem);
+    background-color: var(--cardBG);
+    padding: 2.5rem;
+    border-radius: 5%;
+}
+
+/* Imagen tarjeta */
+
+.tarjeta_img {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5%;
+    line-height: 0;
+}
+
+.tarjeta_img .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--cyanAlpha);
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.tarjeta_img:hover .overlay{
+    opacity: 1;
+}
+
+.tarjeta_img img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Info tarjeta */
+
+.tarjeta_titulo {
+    color: var(--white);
+}
+
+.tarjeta_titulo:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.tarjeta_descripcion {
+    line-height: 1.5;
+}
+
+.tarjeta_precio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; 
+}
+
+.tarjeta_precio .precio {
+    display: flex;
+    justify-content: left;
+}
+
+.tarjeta_precio .tiempo {
+    display: flex;
+    justify-content: right;
+}
+
+.tarjeta_precio .icono {
+    margin-right: 0.5rem;
+    height: 2rem;
+}
+
+.tarjeta_precio .texto{
+    color: var(--cyan);
+    font-weight: 400;
+}
+
+/* Autor */
+
+.tarjeta_autor {
+    display: flex;
+    vertical-align: middle;
+}
+
+.tarjeta_autor .avatar {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.tarjeta_autor .texto {
+    margin: auto 0;
+}
+
+.tarjeta_autor .texto span {
+    color: var(--white);
+}
+
+.tarjeta_autor .texto span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+
+
+/* Footer */
+
+.footer .attribution {
+    font-size: 1.1rem; 
+    text-align: center;
+    color: var(--font);
+}
+
+.footer .attribution a {
+    text-decoration: none;
+    color: var(--white);
+}
