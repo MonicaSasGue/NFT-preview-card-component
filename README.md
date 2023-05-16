@@ -11,7 +11,7 @@
     <br />
     <a href="https://spectacular-palmier-7f7bd5.netlify.app" target="_blank">View Demo</a>
     &nbsp;·&nbsp;
-    <a href="https://github.com/MonicaSasGue/Product-preview-card-component.git" target="_blank">View Code</a>
+    <a href="https://github.com/MonicaSasGue/NFT-preview-card-component" target="_blank">View Code</a>
   </p>
 </div>
 
